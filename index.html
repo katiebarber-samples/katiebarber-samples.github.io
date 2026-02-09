@@ -20,7 +20,6 @@
       display: flex;
     }
 
-    /* SIDE NAVIGATION */
     .side-nav {
       width: 220px;
       background: #004578;
@@ -49,7 +48,6 @@
       padding-left: 1.4rem;
     }
 
-    /* MAIN CONTENT AREA */
     .main-content {
       margin-left: 240px;
       width: calc(100% - 240px);
@@ -142,7 +140,6 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.25);
     }
 
-    /* RESPONSIVE */
     @media (max-width: 900px) {
       .side-nav {
         display: none;
@@ -157,10 +154,63 @@
 
 <body>
 
-  <!-- SIDE NAVIGATION -->
   <div class="side-nav">
     <a href="#product">Product Docs</a>
-    <a href="#admin">
+    <a href="#admin">Admin Docs</a>
+    <a href="#training">Training Materials</a>
+    <a href="#other">Other Samples</a>
+    <a href="#resume">Résumé</a>
+  </div>
+
+  <div class="main-content">
+    <header>
+      <h1>Katie Barber Writing Samples</h1>
+    </header>
+
+    <div class="container">
+
+      <h2 id="product"><span class="icon-blue">📘</span>Product Documentation</h2>
+      <ul>
+        <li>
+          <a href="YOUR-LINK-HERE" target="_blank">Sample Product Doc</a>
+          <div class="description">Description of the sample.</div>
+        </li>
+      </ul>
+
+      <h2 id="admin"><span class="icon-green">🗂️</span>Admin Documentation</h2>
+      <ul>
+        <li>
+          <a href="YOUR-LINK-HERE" target="_blank">Admin Guide Sample</a>
+          <div class="description">Description of the sample.</div>
+        </li>
+      </ul>
+
+      <h2 id="training"><span class="icon-purple">🎓</span>Training Materials</h2>
+      <ul>
+        <li>
+          <a href="YOUR-LINK-HERE" target="_blank">Training Sample</a>
+          <div class="description">Description of the sample.</div>
+        </li>
+      </ul>
+
+      <h2 id="other"><span class="icon-orange">📝</span>Other Samples</h2>
+      <ul>
+        <li>
+          <a href="YOUR-LINK-HERE" target="_blank">Other Sample</a>
+          <div class="description">Description of the sample.</div>
+        </li>
+      </ul>
+
+      <h2 id="resume"><span class="icon-blue">📄</span>Résumé</h2>
+      <a class="resume-button" href="YOUR-RESUME-LINK.pdf" target="_blank">Download Résumé</a>
+
+    </div>
+  </div>
+
+</body>
+</html>
+
+
 
 
 
