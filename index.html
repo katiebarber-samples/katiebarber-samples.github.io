@@ -15,7 +15,6 @@
       line-height: 1.6;
     }
 
-    /* NAVIGATION */
     nav {
       background: #00264d;
       padding: 0.7rem 1rem;
@@ -59,12 +58,10 @@
       gap: 0.5rem;
     }
 
-    /* ICON COLORS */
     .icon-blue { color: #003366; }
     .icon-green { color: #2e7d32; }
     .icon-purple { color: #6a1b9a; }
     .icon-orange { color: #ef6c00; }
-    .icon-gold { color: #b8860b; }
 
     ul {
       list-style: none;
@@ -101,30 +98,12 @@
       font-weight: 600;
       margin-top: 1rem;
     }
-
-    /* FEATURED SECTION */
-    .featured-box {
-      background: #fff8e1;
-      border-left: 6px solid #ffca28;
-      padding: 1.2rem;
-      border-radius: 6px;
-      margin-bottom: 2rem;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    }
-    .featured-title {
-      font-size: 1.2rem;
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-      color: #b8860b;
-    }
   </style>
 </head>
 
 <body>
 
-  <!-- NAVIGATION -->
   <nav>
-    <a href="#featured">Featured</a>
     <a href="#product">Product Docs</a>
     <a href="#admin">Admin & Config</a>
     <a href="#api">API & Integration</a>
@@ -139,21 +118,6 @@
 
   <div class="container">
 
-    <!-- FEATURED SAMPLES -->
-    <h2 id="featured"><span class="icon-gold">⭐</span>Featured Samples</h2>
-    <div class="featured-box">
-      <div class="featured-title">Xerox® Versant® 80 Press – User Guide</div>
-      <a href="https://download.support.xerox.com/pub/docs/VERSANT_80/userdocs/any-os/en_GB/EN_UG_Versant80Press_v3.1_Nov2015.pdf" target="_blank">
-        View Sample
-      </a>
-      <p class="description">A comprehensive, high‑complexity guide demonstrating structured authoring, hardware/software integration, and user‑focused clarity.</p>
-
-      <div class="featured-title" style="margin-top:1rem;">Pipeline Integration Instructions</div>
-      <a href="data_connect_app_menu.pdf" target="_blank">View Sample</a>
-      <p class="description">Technical workflow documentation for university administrators, showcasing API‑adjacent content and system integration clarity.</p>
-    </div>
-
-    <!-- PRODUCT & USER DOCUMENTATION -->
     <h2 id="product"><span class="icon-blue">📘</span>Product & User Documentation</h2>
     <ul>
       <li>
@@ -176,16 +140,8 @@
         </a>
         <p class="description">User Guide for iOS</p>
       </li>
-
-      <li>
-        <a href="https://download.support.xerox.com/pub/docs/MOBILEPRINTPORTAL/userdocs/any-os/en_GB/Xerox_MobilePrintPortal_UserGuide_Android_v3_0_1_EN.pdf" target="_blank">
-          Xerox® Mobile Print Portal (Android)
-        </a>
-        <p class="description">User Guide for Android</p>
-      </li>
     </ul>
 
-    <!-- SYSTEM ADMINISTRATION & TECHNICAL CONFIGURATION -->
     <h2 id="admin"><span class="icon-green">🛠️</span>System Administration & Technical Configuration</h2>
     <ul>
       <li>
@@ -210,7 +166,6 @@
       </li>
     </ul>
 
-    <!-- INTEGRATION & API DOCUMENTATION -->
     <h2 id="api"><span class="icon-purple">🔗</span>Integration & API Documentation</h2>
     <ul>
       <li>
@@ -228,7 +183,6 @@
       </li>
     </ul>
 
-    <!-- HARDWARE & SYSTEM DOCUMENTATION -->
     <h2 id="hardware"><span class="icon-orange">🖨️</span>Hardware & System Documentation</h2>
     <ul>
       <li>
@@ -249,6 +203,7 @@
   </div>
 </body>
 </html>
+
 
 
 
