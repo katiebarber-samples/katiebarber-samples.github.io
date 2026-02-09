@@ -6,9 +6,7 @@
   <title>Katie Barber Writing Samples</title>
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -17,6 +15,13 @@
       background: #f7f7f7;
       color: #333;
       line-height: 1.6;
+    }
+
+    /* LAYOUT */
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
 
     /* NAVIGATION */
@@ -55,13 +60,8 @@
       font-size: 2rem;
     }
 
-    .container {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    h2 {
+    /* SECTION TITLES */
+    .section-title {
       border-bottom: 3px solid #005FB8;
       padding-bottom: 0.3rem;
       margin-top: 2.5rem;
@@ -70,19 +70,18 @@
       gap: 0.5rem;
     }
 
-    /* ICON COLORS */
-    .icon-blue { color: #005FB8; }
-    .icon-green { color: #2e7d32; }
-    .icon-purple { color: #6a1b9a; }
-    .icon-orange { color: #ef6c00; }
+    /* ICONS */
+    .icon { font-size: 1.2rem; }
+    .blue { color: #005FB8; }
+    .green { color: #2e7d32; }
+    .purple { color: #6a1b9a; }
+    .orange { color: #ef6c00; }
 
-    ul {
-      list-style: none;
-      padding: 0;
-    }
+    /* LISTS */
+    ul { list-style: none; padding: 0; }
 
-    /* CARD STYLE */
-    li {
+    /* CARDS */
+    .card {
       background: white;
       margin: 0.5rem 0;
       padding: 1rem;
@@ -90,19 +89,18 @@
       box-shadow: 0 1px 3px rgba(0,0,0,0.1);
       transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
-    li:hover {
+    .card:hover {
       transform: translateY(-3px);
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
 
-    a {
+    /* LINKS */
+    .item-title {
       color: #005FB8;
       font-weight: bold;
       text-decoration: none;
     }
-    a:hover {
-      text-decoration: underline;
-    }
+    .item-title:hover { text-decoration: underline; }
 
     .description {
       margin-top: 0.3rem;
@@ -110,7 +108,7 @@
       font-size: 0.95rem;
     }
 
-    /* FLUENT BUTTON */
+    /* BUTTON */
     .resume-button {
       display: inline-block;
       padding: 12px 24px;
@@ -148,82 +146,94 @@
 
   <div class="container">
 
-    <h2 id="product"><span class="icon-blue">📘</span>Product & User Documentation</h2>
+    <!-- PRODUCT -->
+    <h2 id="product" class="section-title">
+      <span class="icon blue">📘</span>Product & User Documentation
+    </h2>
     <ul>
-      <li>
-        <a href="https://download.support.xerox.com/pub/docs/VERSANT_80/userdocs/any-os/en_GB/EN_UG_Versant80Press_v3.1_Nov2015.pdf" target="_blank">
+      <li class="card">
+        <a class="item-title" href="https://download.support.xerox.com/pub/docs/VERSANT_80/userdocs/any-os/en_GB/EN_UG_Versant80Press_v3.1_Nov2015.pdf" target="_blank">
           Xerox® Versant® 80 Press
         </a>
         <p class="description">User Guide</p>
       </li>
 
-      <li>
-        <a href="https://download.support.xerox.com/pub/docs/WC3335_WC3345/userdocs/any-os/pt_BR/quick_use_guide_en_fr_it_de_es_pt.pdf" target="_blank">
+      <li class="card">
+        <a class="item-title" href="https://download.support.xerox.com/pub/docs/WC3335_WC3345/userdocs/any-os/pt_BR/quick_use_guide_en_fr_it_de_es_pt.pdf" target="_blank">
           Xerox® WorkCentre® 3335/3345
         </a>
         <p class="description">Quick Use Guide</p>
       </li>
 
-      <li>
-        <a href="https://download.support.xerox.com/pub/docs/MOBILEPRINTPORTAL/userdocs/any-os/en_GB/Xerox_MobilePrintPortal_UserGuide_iOS_v3_0_1_EN.pdf" target="_blank">
+      <li class="card">
+        <a class="item-title" href="https://download.support.xerox.com/pub/docs/MOBILEPRINTPORTAL/userdocs/any-os/en_GB/Xerox_MobilePrintPortal_UserGuide_iOS_v3_0_1_EN.pdf" target="_blank">
           Xerox® Mobile Print Portal (iOS)
         </a>
         <p class="description">User Guide for iOS</p>
       </li>
     </ul>
 
-    <h2 id="admin"><span class="icon-green">🛠️</span>System Administration & Technical Configuration</h2>
+    <!-- ADMIN -->
+    <h2 id="admin" class="section-title">
+      <span class="icon green">🛠️</span>System Administration & Technical Configuration
+    </h2>
     <ul>
-      <li>
-        <a href="https://download.support.xerox.com/pub/docs/VERSANT_80/userdocs/any-os/en/EN_SAG_Versant80Press_v3.1_Nov2015.pdf" target="_blank">
+      <li class="card">
+        <a class="item-title" href="https://download.support.xerox.com/pub/docs/VERSANT_80/userdocs/any-os/en/EN_SAG_Versant80Press_v3.1_Nov2015.pdf" target="_blank">
           Xerox® Versant® 80 Press
         </a>
         <p class="description">System Administrator Guide</p>
       </li>
 
-      <li>
-        <a href="data_connect_app_menu.pdf" target="_blank">
+      <li class="card">
+        <a class="item-title" href="data_connect_app_menu.pdf" target="_blank">
           Online Help: Pipeline Instructions
         </a>
         <p class="description">Online instructions for university administrators</p>
       </li>
 
-      <li>
-        <a href="api_selector.pdf" target="_blank">
+      <li class="card">
+        <a class="item-title" href="api_selector.pdf" target="_blank">
           Online Help: API Selector Instructions
         </a>
         <p class="description">Online instructions for university administrators</p>
       </li>
     </ul>
 
-    <h2 id="api"><span class="icon-purple">🔗</span>Integration & API Documentation</h2>
+    <!-- API -->
+    <h2 id="api" class="section-title">
+      <span class="icon purple">🔗</span>Integration & API Documentation
+    </h2>
     <ul>
-      <li>
-        <a href="api_selector.pdf" target="_blank">
+      <li class="card">
+        <a class="item-title" href="api_selector.pdf" target="_blank">
           API Selector Instructions
         </a>
         <p class="description">Developer-adjacent documentation for API selection workflows</p>
       </li>
 
-      <li>
-        <a href="data_connect_app_menu.pdf" target="_blank">
+      <li class="card">
+        <a class="item-title" href="data_connect_app_menu.pdf" target="_blank">
           Pipeline Integration Instructions
         </a>
         <p class="description">Technical workflow documentation for system integrations</p>
       </li>
     </ul>
 
-    <h2 id="hardware"><span class="icon-orange">🖨️</span>Hardware & System Documentation</h2>
+    <!-- HARDWARE -->
+    <h2 id="hardware" class="section-title">
+      <span class="icon orange">🖨️</span>Hardware & System Documentation
+    </h2>
     <ul>
-      <li>
-        <a href="https://download.support.xerox.com/pub/docs/VERSANT_80/userdocs/any-os/en_GB/EN_UG_Versant80Press_v3.1_Nov2015.pdf" target="_blank">
+      <li class="card">
+        <a class="item-title" href="https://download.support.xerox.com/pub/docs/VERSANT_80/userdocs/any-os/en_GB/EN_UG_Versant80Press_v3.1_Nov2015.pdf" target="_blank">
           Xerox® Versant® 80 Press
         </a>
         <p class="description">Hardware-focused User Guide</p>
       </li>
 
-      <li>
-        <a href="https://download.support.xerox.com/pub/docs/WC3335_WC3345/userdocs/any-os/pt_BR/quick_use_guide_en_fr_it_de_es_pt.pdf" target="_blank">
+      <li class="card">
+        <a class="item-title" href="https://download.support.xerox.com/pub/docs/WC3335_WC3345/userdocs/any-os/pt_BR/quick_use_guide_en_fr_it_de_es_pt.pdf" target="_blank">
           Xerox® WorkCentre® 3335/3345
         </a>
         <p class="description">Quick Use Guide for multifunction hardware</p>
@@ -233,6 +243,8 @@
   </div>
 </body>
 </html>
+
+
 
 
 
