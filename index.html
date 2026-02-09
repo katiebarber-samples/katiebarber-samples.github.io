@@ -6,273 +6,214 @@
   <title>Katie Barber Writing Samples</title>
 
   <style>
-    html { scroll-behavior: smooth; }
-
     body {
-      font-family: Arial, Helvetica, sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f7f7f7;
+      font-family: Arial, sans-serif;
+      background: #fafafa;
       color: #333;
-      line-height: 1.6;
+      display: flex;
     }
 
     .sidebar {
-      position: fixed;
-      left: 0;
-      top: 80px;
-      width: 180px;
-      padding: 1rem;
-      background: #fafafa;
+      width: 240px;
+      background: #f4f4f4;
+      padding: 20px;
       border-right: 1px solid #ddd;
-      height: 100%;
-      box-shadow: 2px 0 6px rgba(0,0,0,0.05);
+      height: 100vh;
+      position: fixed;
+      overflow-y: auto;
     }
 
-    .sidebar h3 {
-      margin-top: 0;
-      font-size: 1.1rem;
-      color: #004578;
+    .sidebar h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #444;
     }
 
     .filter-btn {
       display: block;
       width: 100%;
-      margin: 0.4rem 0;
-      padding: 0.5rem;
-      background: #f4f4f4;
+      padding: 10px;
+      margin: 6px 0;
+      background: #e8e8e8;
       border: none;
       border-radius: 6px;
       cursor: pointer;
-      font-weight: 600;
       text-align: left;
-      transition: background 0.2s ease;
+      font-size: 14px;
     }
 
-    .filter-btn:hover {
-      background: #e6e6e6;
+    .filter-btn.active {
+      background: #d0d0d0;
+      font-weight: bold;
     }
 
-    .container {
+    .content {
+      margin-left: 260px;
+      padding: 30px;
       max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      margin-left: 220px;
     }
 
-    nav {
-      background: #004578;
-      padding: 0.7rem 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-    }
-    nav a {
-      color: #ffdd55;
-      margin-right: 1.2rem;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 0.3rem 0.4rem;
-      border-radius: 4px;
-      transition: background 0.2s ease, padding 0.2s ease;
-    }
-    nav a:hover {
-      background: linear-gradient(90deg, #005FB8, #0078D4);
-      padding: 0.3rem 0.6rem;
+    h1 {
+      margin-top: 0;
+      font-size: 28px;
+      color: #222;
     }
 
-    header {
-      background: linear-gradient(90deg, #004578, #005FB8);
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-
-    .section-title {
-      background: #e8eef5;
-      border-left: 5px solid #005FB8;
-      padding: 0.8rem 1rem;
-      margin-top: 2.5rem;
+    .section-header {
+      background: #e9eef5;
+      padding: 10px 14px;
       border-radius: 6px;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 1.2rem;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #2a3b55;
     }
 
-    ul { list-style: none; padding: 0; }
-
-    .card {
+    .sample-card {
       background: white;
-      margin: 0.5rem 0;
-      padding: 1rem;
-      border-radius: 6px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-    }
-    .card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      padding: 18px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      border: 1px solid #ddd;
     }
 
-    .item-title {
-      color: #005FB8;
-      font-weight: bold;
-      text-decoration: none;
+    .sample-title {
+      font-size: 18px;
+      margin: 0 0 6px 0;
+      color: #1a1a1a;
     }
-    .item-title:hover { text-decoration: underline; }
 
-    .description {
-      margin-top: 0.3rem;
+    .sample-desc {
+      margin: 0 0 10px 0;
+      font-size: 14px;
       color: #555;
-      font-size: 0.95rem;
     }
 
     .badge {
       display: inline-block;
-      padding: 2px 8px;
-      border-radius: 6px;
-      font-size: 0.75rem;
-      font-weight: bold;
+      padding: 4px 8px;
+      font-size: 12px;
+      border-radius: 4px;
+      background: #dfe7f3;
+      color: #2a3b55;
       margin-right: 6px;
-      color: white;
     }
 
-    .badge.product { background: #6fa8dc; }
-    .badge.admin { background: #8bc98b; }
-    .badge.api { background: #b39ddb; }
-    .badge.hardware { background: #f2a974; }
-    .badge.training { background: #7fb3d5; }
+    .top-buttons {
+      margin: 20px 0;
+    }
 
-    .resume-button {
+    .top-buttons a {
       display: inline-block;
-      padding: 12px 24px;
-      background: #005FB8;
+      padding: 10px 16px;
+      margin-right: 10px;
+      background: #2a3b55;
       color: white;
       text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-      margin-top: 1rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+      border-radius: 6px;
+      font-size: 14px;
     }
-    .resume-button:hover {
-      background: #0078D4;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+
+    .top-buttons a:hover {
+      background: #1d2a3d;
+    }
+
+    .video-container {
+      margin-top: 10px;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 8px;
     }
   </style>
+
+  <script>
+    function filterSamples(category) {
+      const cards = document.querySelectorAll(".sample-card");
+      const buttons = document.querySelectorAll(".filter-btn");
+
+      buttons.forEach(btn => btn.classList.remove("active"));
+      document.getElementById("btn-" + category).classList.add("active");
+
+      cards.forEach(card => {
+        if (category === "all" || card.dataset.category.includes(category)) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+  </script>
 </head>
 
 <body>
 
-  <nav>
-    <a href="#product">Product</a>
-    <a href="#admin">Admin</a>
-    <a href="#api">API</a>
-    <a href="#hardware">Hardware</a>
-    <a href="#training">Training</a>
-  </nav>
+  <div class="sidebar">
+    <h2>Filter Samples</h2>
+    <button id="btn-all" class="filter-btn active" onclick="filterSamples('all')">All</button>
+    <button id="btn-software" class="filter-btn" onclick="filterSamples('software')">Software</button>
+    <button id="btn-hardware" class="filter-btn" onclick="filterSamples('hardware')">Hardware</button>
+    <button id="btn-training" class="filter-btn" onclick="filterSamples('training')">Training</button>
+  </div>
 
-  <aside class="sidebar">
-    <h3>Categories</h3>
-    <button class="filter-btn" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="product">📘 Product</button>
-    <button class="filter-btn" data-filter="admin">🛠️ Admin</button>
-    <button class="filter-btn" data-filter="api">🔗 API</button>
-    <button class="filter-btn" data-filter="hardware">🖨️ Hardware</button>
-    <button class="filter-btn" data-filter="training">🎥 Training</button>
-  </aside>
+  <div class="content">
+    <h1>Katie Barber Writing Samples</h1>
 
-  <header>
-    <h1>Katie Barber – Writing Samples</h1>
-    <p>Lead Technical Writer • Software & Hardware Documentation • Structured Authoring</p>
+    <div class="top-buttons">
+      <a href="KatieBarber_Resume.pdf" target="_blank">Résumé</a>
+      <a href="https://www.linkedin.com/in/katiebarber" target="_blank">LinkedIn</a>
+    </div>
 
-    <a href="KatieBarber.pdf" target="_blank" class="resume-button">
-      View My Résumé (PDF)
-    </a>
+    <div class="section-header">Writing Samples</div>
 
-    <a href="https://www.linkedin.com/in/katie-barber-0a966813/"
-       target="_blank"
-       class="resume-button">
-       Visit My LinkedIn
-    </a>
-  </header>
+    <div class="sample-card" data-category="software">
+      <div class="sample-title">Software Guide: Feature Overview</div>
+      <div class="sample-desc">End‑to‑end user guide for a cloud-based software feature, including workflows and UI descriptions.</div>
+      <span class="badge">Software</span>
+    </div>
 
-  <div class="container">
+    <div class="sample-card" data-category="hardware">
+      <div class="sample-title">Hardware Installation Instructions</div>
+      <div class="sample-desc">Step-by-step installation and configuration instructions for a physical device.</div>
+      <span class="badge">Hardware</span>
+    </div>
 
-    <h2 id="product" class="section-title">📘 Product Documentation</h2>
+    <div class="sample-card" data-category="software">
+      <div class="sample-title">API Documentation</div>
+      <div class="sample-desc">Technical reference documentation for REST endpoints, parameters, and example calls.</div>
+      <span class="badge">Software</span>
+    </div>
 
-    <ul>
-      <li class="card product hardware">
-        <a class="item-title" href="https://download.support.xerox.com/pub/docs/VERSANT_80/userdocs/any-os/en_GB/EN_UG_Versant80Press_v3.1_Nov2015.pdf" target="_blank">
-          Xerox® Versant® 80 Press — User Guide
-        </a>
-        <p class="description">
-          <span class="badge product">Product</span>
-          <span class="badge hardware">Hardware</span>
-        </p>
-      </li>
+    <div class="sample-card" data-category="hardware">
+      <div class="sample-title">Troubleshooting Guide</div>
+      <div class="sample-desc">Diagnostic flow and resolution steps for common hardware issues.</div>
+      <span class="badge">Hardware</span>
+    </div>
 
-      <li class="card product hardware">
-        <a class="item-title" href="https://download.support.xerox.com/pub/docs/WC3335_WC3345/userdocs/any-os/pt_BR/quick_use_guide_en_fr_it_de_es_pt.pdf" target="_blank">
-          Xerox® WorkCentre® 3335/3345 — Quick Use Guide
-        </a>
-        <p class="description">
-          <span class="badge product">Product</span>
-          <span class="badge hardware">Hardware</span>
-        </p>
-      </li>
+    <div class="section-header">Training</div>
 
-      <li class="card product">
-        <a class="item-title" href="https://download.support.xerox.com/pub/docs/MOBILEPRINTPORTAL/userdocs/any-os/en_GB/Xerox_MobilePrintPortal_UserGuide_iOS_v3_0_1_EN.pdf" target="_blank">
-          Xerox® Mobile Print Portal (iOS) — User Guide
-        </a>
-        <p class="description">
-          <span class="badge product">Product</span>
-        </p>
-      </li>
-    </ul>
+    <div class="sample-card" data-category="training">
+      <div class="sample-title">DITA Training Video</div>
+      <div class="sample-desc">A short training video introducing DITA concepts and structured authoring.</div>
+      <span class="badge">Training</span>
 
-    <h2 id="admin" class="section-title">🛠️ System Administration</h2>
+      <div class="video-container">
+        <video controls>
+          <source src="training_DITA.mov" type="video/quicktime">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
 
-    <ul>
-      <li class="card admin">
-        <a class="item-title" href="https://download.support.xerox.com/pub/docs/VERSANT_80/userdocs/any-os/en/EN_SAG_Versant80Press_v3.1_Nov2015.pdf" target="_blank">
-          Xerox® Versant® 80 Press — System Administrator Guide
-        </a>
-        <p class="description">
-          <span class="badge admin">Admin</span>
-        </p>
-      </li>
-    </ul>
+  </div>
 
-    <h2 id="api" class="section-title">🔗 API & Integration</h2>
+</body>
+</html>
 
-    <ul>
-      <li class="card admin api">
-        <a class="item-title" href="data_connect_app_menu.pdf" target="_blank">
-          Pipeline Instructions — Online Help
-        </a>
-        <p class="description">
-          <span class="badge admin">Admin</span>
-          <span class="badge api">API</span>
-        </p>
-      </li>
 
-      <li class="card admin api">
-        <a class="item-title" href="api_selector.pdf" target="_blank">
-          API Selector Instructions — Online Help
-        </a>
-        <p class="description">
-          <span class="badge admin">Admin</span>
-          <span class="badge api">API</span>
 
 
 
