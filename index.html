@@ -6,6 +6,10 @@
   <title>Katie Barber Writing Samples</title>
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
       margin: 0;
@@ -15,28 +19,36 @@
       line-height: 1.6;
     }
 
+    /* NAVIGATION */
     nav {
-      background: #00264d;
+      background: #004578;
       padding: 0.7rem 1rem;
       position: sticky;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
     }
     nav a {
       color: #ffdd55;
       margin-right: 1.2rem;
       text-decoration: none;
       font-weight: bold;
+      padding: 0.3rem 0.4rem;
+      border-radius: 4px;
+      transition: background 0.2s ease, padding 0.2s ease;
     }
     nav a:hover {
-      text-decoration: underline;
+      background: linear-gradient(90deg, #005FB8, #0078D4);
+      padding: 0.3rem 0.6rem;
     }
 
+    /* HEADER */
     header {
-      background: #003366;
+      background: linear-gradient(90deg, #004578, #005FB8);
       color: white;
       padding: 2rem 1rem;
       text-align: center;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
     }
     header h1 {
       margin: 0;
@@ -50,7 +62,7 @@
     }
 
     h2 {
-      border-bottom: 3px solid #003366;
+      border-bottom: 3px solid #005FB8;
       padding-bottom: 0.3rem;
       margin-top: 2.5rem;
       display: flex;
@@ -58,7 +70,8 @@
       gap: 0.5rem;
     }
 
-    .icon-blue { color: #003366; }
+    /* ICON COLORS */
+    .icon-blue { color: #005FB8; }
     .icon-green { color: #2e7d32; }
     .icon-purple { color: #6a1b9a; }
     .icon-orange { color: #ef6c00; }
@@ -67,36 +80,53 @@
       list-style: none;
       padding: 0;
     }
+
+    /* CARD STYLE */
     li {
       background: white;
       margin: 0.5rem 0;
       padding: 1rem;
       border-radius: 6px;
       box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
+    li:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
     a {
-      color: #003366;
+      color: #005FB8;
       font-weight: bold;
       text-decoration: none;
     }
     a:hover {
       text-decoration: underline;
     }
+
     .description {
       margin-top: 0.3rem;
       color: #555;
       font-size: 0.95rem;
     }
 
+    /* FLUENT BUTTON */
     .resume-button {
       display: inline-block;
-      padding: 10px 20px;
-      background: #005a9e;
+      padding: 12px 24px;
+      background: #005FB8;
       color: white;
       text-decoration: none;
-      border-radius: 6px;
+      border-radius: 8px;
       font-weight: 600;
       margin-top: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+    .resume-button:hover {
+      background: #0078D4;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.25);
     }
   </style>
 </head>
@@ -203,6 +233,8 @@
   </div>
 </body>
 </html>
+
+
 
 
 
