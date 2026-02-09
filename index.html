@@ -24,10 +24,10 @@
       top: 80px;
       width: 180px;
       padding: 1rem;
-      background: #ffffff;
+      background: #fafafa;
       border-right: 1px solid #ddd;
       height: 100%;
-      box-shadow: 2px 0 6px rgba(0,0,0,0.1);
+      box-shadow: 2px 0 6px rgba(0,0,0,0.05);
     }
 
     .sidebar h3 {
@@ -41,7 +41,7 @@
       width: 100%;
       margin: 0.4rem 0;
       padding: 0.5rem;
-      background: #f2f2f2;
+      background: #f4f4f4;
       border: none;
       border-radius: 6px;
       cursor: pointer;
@@ -51,7 +51,7 @@
     }
 
     .filter-btn:hover {
-      background: #e0e0e0;
+      background: #e6e6e6;
     }
 
     /* LAYOUT */
@@ -98,22 +98,21 @@
       font-size: 2rem;
     }
 
-    /* SECTION TITLES */
+    /* SECTION TITLES — subtle background */
     .section-title {
-      border-bottom: 3px solid #005FB8;
-      padding-bottom: 0.3rem;
+      background: #e8eef5;
+      border-left: 5px solid #005FB8;
+      padding: 0.8rem 1rem;
       margin-top: 2.5rem;
+      border-radius: 6px;
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      font-size: 1.2rem;
     }
 
     /* ICONS */
     .icon { font-size: 1.2rem; }
-    .blue { color: #005FB8; }
-    .green { color: #2e7d32; }
-    .purple { color: #6a1b9a; }
-    .orange { color: #ef6c00; }
 
     /* LISTS */
     ul { list-style: none; padding: 0; }
@@ -146,7 +145,7 @@
       font-size: 0.95rem;
     }
 
-    /* BADGES */
+    /* BADGES — softer colors */
     .badge {
       display: inline-block;
       padding: 2px 8px;
@@ -157,10 +156,10 @@
       color: white;
     }
 
-    .badge.product { background: #005FB8; }
-    .badge.admin { background: #2e7d32; }
-    .badge.api { background: #6a1b9a; }
-    .badge.hardware { background: #ef6c00; }
+    .badge.product { background: #6fa8dc; }
+    .badge.admin { background: #8bc98b; }
+    .badge.api { background: #b39ddb; }
+    .badge.hardware { background: #f2a974; }
 
     /* BUTTONS */
     .resume-button {
@@ -186,7 +185,10 @@
 <body>
 
   <nav>
-    <a href="#samples">Writing Samples</a>
+    <a href="#product">Product</a>
+    <a href="#admin">Admin</a>
+    <a href="#api">API</a>
+    <a href="#hardware">Hardware</a>
   </nav>
 
   <aside class="sidebar">
@@ -213,14 +215,11 @@
     </a>
   </header>
 
-  <div class="container" id="samples">
+  <div class="container">
 
-    <h2 class="section-title">
-      <span class="icon blue">📘</span>Writing Samples
-    </h2>
+    <h2 id="product" class="section-title">📘 Product Documentation</h2>
 
     <ul>
-
       <li class="card product hardware">
         <a class="item-title" href="https://download.support.xerox.com/pub/docs/VERSANT_80/userdocs/any-os/en_GB/EN_UG_Versant80Press_v3.1_Nov2015.pdf" target="_blank">
           Xerox® Versant® 80 Press — User Guide
@@ -228,15 +227,6 @@
         <p class="description">
           <span class="badge product">Product</span>
           <span class="badge hardware">Hardware</span>
-        </p>
-      </li>
-
-      <li class="card admin">
-        <a class="item-title" href="https://download.support.xerox.com/pub/docs/VERSANT_80/userdocs/any-os/en/EN_SAG_Versant80Press_v3.1_Nov2015.pdf" target="_blank">
-          Xerox® Versant® 80 Press — System Administrator Guide
-        </a>
-        <p class="description">
-          <span class="badge admin">Admin</span>
         </p>
       </li>
 
@@ -258,7 +248,24 @@
           <span class="badge product">Product</span>
         </p>
       </li>
+    </ul>
 
+    <h2 id="admin" class="section-title">🛠️ System Administration</h2>
+
+    <ul>
+      <li class="card admin">
+        <a class="item-title" href="https://download.support.xerox.com/pub/docs/VERSANT_80/userdocs/any-os/en/EN_SAG_Versant80Press_v3.1_Nov2015.pdf" target="_blank">
+          Xerox® Versant® 80 Press — System Administrator Guide
+        </a>
+        <p class="description">
+          <span class="badge admin">Admin</span>
+        </p>
+      </li>
+    </ul>
+
+    <h2 id="api" class="section-title">🔗 API & Integration</h2>
+
+    <ul>
       <li class="card admin api">
         <a class="item-title" href="data_connect_app_menu.pdf" target="_blank">
           Pipeline Instructions — Online Help
@@ -278,32 +285,24 @@
           <span class="badge api">API</span>
         </p>
       </li>
-
     </ul>
 
-  </div>
+    <h2 id="hardware" class="section-title">🖨️ Hardware Documentation</h2>
 
-  <script>
-    const buttons = document.querySelectorAll('.filter-btn');
-    const cards = document.querySelectorAll('.card');
+    <ul>
+      <li class="card hardware product">
+        <a class="item-title" href="https://download.support.xerox.com/pub/docs/VERSANT_80/userdocs/any-os/en_GB/EN_UG_Versant80Press_v3.1_Nov2015.pdf" target="_blank">
+          Xerox® Versant® 80 Press — User Guide
+        </a>
+        <p class="description">
+          <span class="badge hardware">Hardware</span>
+          <span class="badge product">Product</span>
+        </p>
+      </li>
 
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const filter = btn.dataset.filter;
+      <li class="card hardware product">
+        <a class="item-title" href="https://download.support.xerox.com/pub/docs/WC3335_WC3345/userdocs/any-os/pt_BR/quick_use_
 
-        cards.forEach(card => {
-          if (filter === 'all' || card.classList.contains(filter)) {
-            card.style.display = 'block';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      });
-    });
-  </script>
-
-</body>
-</html>
 
 
 
