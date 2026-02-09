@@ -17,12 +17,52 @@
       line-height: 1.6;
     }
 
+    /* SIDEBAR */
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 80px;
+      width: 180px;
+      padding: 1rem;
+      background: #ffffff;
+      border-right: 1px solid #ddd;
+      height: 100%;
+      box-shadow: 2px 0 6px rgba(0,0,0,0.1);
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+      font-size: 1.1rem;
+      color: #004578;
+    }
+
+    .filter-btn {
+      display: block;
+      width: 100%;
+      margin: 0.4rem 0;
+      padding: 0.5rem;
+      background: #f2f2f2;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      text-align: left;
+      transition: background 0.2s ease;
+    }
+
+    .filter-btn:hover {
+      background: #e0e0e0;
+    }
+
+    /* LAYOUT */
     .container {
       max-width: 900px;
       margin: 2rem auto;
       padding: 0 1rem;
+      margin-left: 220px;
     }
 
+    /* NAVIGATION */
     nav {
       background: #004578;
       padding: 0.7rem 1rem;
@@ -45,6 +85,7 @@
       padding: 0.3rem 0.6rem;
     }
 
+    /* HEADER */
     header {
       background: linear-gradient(90deg, #004578, #005FB8);
       color: white;
@@ -57,6 +98,7 @@
       font-size: 2rem;
     }
 
+    /* SECTION TITLES */
     .section-title {
       border-bottom: 3px solid #005FB8;
       padding-bottom: 0.3rem;
@@ -66,14 +108,17 @@
       gap: 0.5rem;
     }
 
+    /* ICONS */
     .icon { font-size: 1.2rem; }
     .blue { color: #005FB8; }
     .green { color: #2e7d32; }
     .purple { color: #6a1b9a; }
     .orange { color: #ef6c00; }
 
+    /* LISTS */
     ul { list-style: none; padding: 0; }
 
+    /* CARDS */
     .card {
       background: white;
       margin: 0.5rem 0;
@@ -87,6 +132,7 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
 
+    /* LINKS */
     .item-title {
       color: #005FB8;
       font-weight: bold;
@@ -100,6 +146,23 @@
       font-size: 0.95rem;
     }
 
+    /* BADGES */
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      margin-right: 6px;
+      color: white;
+    }
+
+    .badge.product { background: #005FB8; }
+    .badge.admin { background: #2e7d32; }
+    .badge.api { background: #6a1b9a; }
+    .badge.hardware { background: #ef6c00; }
+
+    /* BUTTONS */
     .resume-button {
       display: inline-block;
       padding: 12px 24px;
@@ -117,29 +180,23 @@
       transform: translateY(-2px);
       box-shadow: 0 4px 8px rgba(0,0,0,0.25);
     }
-
-    .linkedin-link {
-      display: inline-block;
-      margin-top: 0.7rem;
-      color: #ffdd55;
-      font-weight: 600;
-      text-decoration: none;
-      transition: opacity 0.2s ease;
-    }
-    .linkedin-link:hover {
-      opacity: 0.8;
-    }
   </style>
 </head>
 
 <body>
 
   <nav>
-    <a href="#product">Product Docs</a>
-    <a href="#admin">Admin & Config</a>
-    <a href="#api">API & Integration</a>
-    <a href="#hardware">Hardware Docs</a>
+    <a href="#samples">Writing Samples</a>
   </nav>
+
+  <aside class="sidebar">
+    <h3>Categories</h3>
+    <button class="filter-btn" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="product">📘 Product</button>
+    <button class="filter-btn" data-filter="admin">🛠️ Admin</button>
+    <button class="filter-btn" data-filter="api">🔗 API</button>
+    <button class="filter-btn" data-filter="hardware">🖨️ Hardware</button>
+  </aside>
 
   <header>
     <h1>Katie Barber – Writing Samples</h1>
@@ -151,110 +208,104 @@
 
     <a href="https://www.linkedin.com/in/katie-barber-0a966813/"
        target="_blank"
-       class="linkedin-link">
-       Connect on LinkedIn
+       class="resume-button">
+       Visit My LinkedIn
     </a>
   </header>
 
-  <div class="container">
+  <div class="container" id="samples">
 
-    <!-- PRODUCT -->
-    <h2 id="product" class="section-title">
-      <span class="icon blue">📘</span>Product & User Documentation
+    <h2 class="section-title">
+      <span class="icon blue">📘</span>Writing Samples
     </h2>
+
     <ul>
-      <li class="card">
+
+      <li class="card product hardware">
         <a class="item-title" href="https://download.support.xerox.com/pub/docs/VERSANT_80/userdocs/any-os/en_GB/EN_UG_Versant80Press_v3.1_Nov2015.pdf" target="_blank">
-          Xerox® Versant® 80 Press
+          Xerox® Versant® 80 Press — User Guide
         </a>
-        <p class="description">User Guide</p>
+        <p class="description">
+          <span class="badge product">Product</span>
+          <span class="badge hardware">Hardware</span>
+        </p>
       </li>
 
-      <li class="card">
-        <a class="item-title" href="https://download.support.xerox.com/pub/docs/WC3335_WC3345/userdocs/any-os/pt_BR/quick_use_guide_en_fr_it_de_es_pt.pdf" target="_blank">
-          Xerox® WorkCentre® 3335/3345
-        </a>
-        <p class="description">Quick Use Guide</p>
-      </li>
-
-      <li class="card">
-        <a class="item-title" href="https://download.support.xerox.com/pub/docs/MOBILEPRINTPORTAL/userdocs/any-os/en_GB/Xerox_MobilePrintPortal_UserGuide_iOS_v3_0_1_EN.pdf" target="_blank">
-          Xerox® Mobile Print Portal (iOS)
-        </a>
-        <p class="description">User Guide for iOS</p>
-      </li>
-    </ul>
-
-    <!-- ADMIN -->
-    <h2 id="admin" class="section-title">
-      <span class="icon green">🛠️</span>System Administration & Technical Configuration
-    </h2>
-    <ul>
-      <li class="card">
+      <li class="card admin">
         <a class="item-title" href="https://download.support.xerox.com/pub/docs/VERSANT_80/userdocs/any-os/en/EN_SAG_Versant80Press_v3.1_Nov2015.pdf" target="_blank">
-          Xerox® Versant® 80 Press
+          Xerox® Versant® 80 Press — System Administrator Guide
         </a>
-        <p class="description">System Administrator Guide</p>
+        <p class="description">
+          <span class="badge admin">Admin</span>
+        </p>
       </li>
 
-      <li class="card">
-        <a class="item-title" href="data_connect_app_menu.pdf" target="_blank">
-          Online Help: Pipeline Instructions
-        </a>
-        <p class="description">Online instructions for university administrators</p>
-      </li>
-
-      <li class="card">
-        <a class="item-title" href="api_selector.pdf" target="_blank">
-          Online Help: API Selector Instructions
-        </a>
-        <p class="description">Online instructions for university administrators</p>
-      </li>
-    </ul>
-
-    <!-- API -->
-    <h2 id="api" class="section-title">
-      <span class="icon purple">🔗</span>Integration & API Documentation
-    </h2>
-    <ul>
-      <li class="card">
-        <a class="item-title" href="api_selector.pdf" target="_blank">
-          API Selector Instructions
-        </a>
-        <p class="description">Developer-adjacent documentation for API selection workflows</p>
-      </li>
-
-      <li class="card">
-        <a class="item-title" href="data_connect_app_menu.pdf" target="_blank">
-          Pipeline Integration Instructions
-        </a>
-        <p class="description">Technical workflow documentation for system integrations</p>
-      </li>
-    </ul>
-
-    <!-- HARDWARE -->
-    <h2 id="hardware" class="section-title">
-      <span class="icon orange">🖨️</span>Hardware & System Documentation
-    </h2>
-    <ul>
-      <li class="card">
-        <a class="item-title" href="https://download.support.xerox.com/pub/docs/VERSANT_80/userdocs/any-os/en_GB/EN_UG_Versant80Press_v3.1_Nov2015.pdf" target="_blank">
-          Xerox® Versant® 80 Press
-        </a>
-        <p class="description">Hardware-focused User Guide</p>
-      </li>
-
-      <li class="card">
+      <li class="card product hardware">
         <a class="item-title" href="https://download.support.xerox.com/pub/docs/WC3335_WC3345/userdocs/any-os/pt_BR/quick_use_guide_en_fr_it_de_es_pt.pdf" target="_blank">
-          Xerox® WorkCentre® 3335/3345
+          Xerox® WorkCentre® 3335/3345 — Quick Use Guide
         </a>
-        <p class="description">Quick Use Guide for multifunction hardware</p>
+        <p class="description">
+          <span class="badge product">Product</span>
+          <span class="badge hardware">Hardware</span>
+        </p>
       </li>
+
+      <li class="card product">
+        <a class="item-title" href="https://download.support.xerox.com/pub/docs/MOBILEPRINTPORTAL/userdocs/any-os/en_GB/Xerox_MobilePrintPortal_UserGuide_iOS_v3_0_1_EN.pdf" target="_blank">
+          Xerox® Mobile Print Portal (iOS) — User Guide
+        </a>
+        <p class="description">
+          <span class="badge product">Product</span>
+        </p>
+      </li>
+
+      <li class="card admin api">
+        <a class="item-title" href="data_connect_app_menu.pdf" target="_blank">
+          Pipeline Instructions — Online Help
+        </a>
+        <p class="description">
+          <span class="badge admin">Admin</span>
+          <span class="badge api">API</span>
+        </p>
+      </li>
+
+      <li class="card admin api">
+        <a class="item-title" href="api_selector.pdf" target="_blank">
+          API Selector Instructions — Online Help
+        </a>
+        <p class="description">
+          <span class="badge admin">Admin</span>
+          <span class="badge api">API</span>
+        </p>
+      </li>
+
     </ul>
 
   </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.card');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+
+        cards.forEach(card => {
+          if (filter === 'all' || card.classList.contains(filter)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+
 </body>
 </html>
+
+
 
 
 
