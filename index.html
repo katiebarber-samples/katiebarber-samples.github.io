@@ -17,14 +17,12 @@
       line-height: 1.6;
     }
 
-    /* LAYOUT */
     .container {
       max-width: 900px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
 
-    /* NAVIGATION */
     nav {
       background: #004578;
       padding: 0.7rem 1rem;
@@ -47,7 +45,6 @@
       padding: 0.3rem 0.6rem;
     }
 
-    /* HEADER */
     header {
       background: linear-gradient(90deg, #004578, #005FB8);
       color: white;
@@ -60,7 +57,6 @@
       font-size: 2rem;
     }
 
-    /* SECTION TITLES */
     .section-title {
       border-bottom: 3px solid #005FB8;
       padding-bottom: 0.3rem;
@@ -70,17 +66,14 @@
       gap: 0.5rem;
     }
 
-    /* ICONS */
     .icon { font-size: 1.2rem; }
     .blue { color: #005FB8; }
     .green { color: #2e7d32; }
     .purple { color: #6a1b9a; }
     .orange { color: #ef6c00; }
 
-    /* LISTS */
     ul { list-style: none; padding: 0; }
 
-    /* CARDS */
     .card {
       background: white;
       margin: 0.5rem 0;
@@ -94,7 +87,6 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
 
-    /* LINKS */
     .item-title {
       color: #005FB8;
       font-weight: bold;
@@ -108,7 +100,6 @@
       font-size: 0.95rem;
     }
 
-    /* BUTTON */
     .resume-button {
       display: inline-block;
       padding: 12px 24px;
@@ -126,6 +117,18 @@
       transform: translateY(-2px);
       box-shadow: 0 4px 8px rgba(0,0,0,0.25);
     }
+
+    .linkedin-link {
+      display: inline-block;
+      margin-top: 0.7rem;
+      color: #ffdd55;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+    .linkedin-link:hover {
+      opacity: 0.8;
+    }
   </style>
 </head>
 
@@ -141,7 +144,16 @@
   <header>
     <h1>Katie Barber – Writing Samples</h1>
     <p>Lead Technical Writer • Software & Hardware Documentation • Structured Authoring</p>
-    <a href="KatieBarber.pdf" target="_blank" class="resume-button">View My Résumé (PDF)</a>
+
+    <a href="KatieBarber.pdf" target="_blank" class="resume-button">
+      View My Résumé (PDF)
+    </a>
+
+    <a href="https://www.linkedin.com/in/katie-barber-0a966813/"
+       target="_blank"
+       class="linkedin-link">
+       Connect on LinkedIn
+    </a>
   </header>
 
   <div class="container">
@@ -243,6 +255,8 @@
   </div>
 </body>
 </html>
+
+
 
 
 
