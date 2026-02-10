@@ -40,24 +40,11 @@ nav a:hover {
   padding: 0.3rem 0.6rem;
 }
 
-/* HEADER */
-header {
-  background: linear-gradient(90deg, #004578, #005FB8);
-  color: white;
-  padding: 2rem 1rem;
-  text-align: center;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-}
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-}
-
 /* SIDEBAR — FIXED + RESPONSIVE OFFSET */
 .sidebar {
   position: fixed;
   left: 0;
-  top: calc(120px + 10vw); /* always clears header */
+  top: calc(120px + 10vw);
   width: 180px;
   padding: 1rem;
   background: #fafafa;
@@ -90,6 +77,19 @@ header h1 {
   padding: 0 1rem;
   margin-left: 220px;
   margin-top: 40px;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(90deg, #004578, #005FB8);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+header h1 {
+  margin: 0;
+  font-size: 2rem;
 }
 
 /* SECTION TITLES */
@@ -170,9 +170,9 @@ ul { list-style: none; padding: 0; }
 <body>
 
 <nav>
-  <a href="#product">Product</a>
-  <a href="#admin">Admin</a>
   <a href="#api">API</a>
+  <a href="#admin">Admin</a>
+  <a href="#product">Product</a>
   <a href="#hardware">Hardware</a>
 </nav>
 
@@ -185,13 +185,48 @@ ul { list-style: none; padding: 0; }
 
 <aside class="sidebar">
   <h3>Categories</h3>
-  <a href="#product">📘 Product</a>
-  <a href="#admin">🛠️ Admin</a>
   <a href="#api">🔗 API</a>
+  <a href="#admin">🛠️ Admin</a>
+  <a href="#product">📘 Product</a>
   <a href="#hardware">🖨️ Hardware</a>
 </aside>
 
 <div class="container">
+
+  <h2 id="api" class="section-title">🔗 API & Integration</h2>
+  <ul>
+    <li class="card admin api">
+      <a class="item-title" href="data_connect_app_menu.pdf" target="_blank">
+        Pipeline Instructions — Online Help
+      </a>
+      <p class="description">
+        <span class="badge admin">Admin</span>
+        <span class="badge api">API</span>
+      </p>
+    </li>
+
+    <li class="card admin api">
+      <a class="item-title" href="api_selector.pdf" target="_blank">
+        API Selector Instructions — Online Help
+      </a>
+      <p class="description">
+        <span class="badge admin">Admin</span>
+        <span class="badge api">API</span>
+      </p>
+    </li>
+  </ul>
+
+  <h2 id="admin" class="section-title">🛠️ System Administration</h2>
+  <ul>
+    <li class="card admin">
+      <a class="item-title" href="https://download.support.xerox.com/pub/docs/VERSANT_80/userdocs/any-os/en/EN_SAG_Versant80Press_v3.1_Nov2015.pdf" target="_blank">
+        Xerox® Versant® 80 Press — System Administrator Guide
+      </a>
+      <p class="description">
+        <span class="badge admin">Admin</span>
+      </p>
+    </li>
+  </ul>
 
   <h2 id="product" class="section-title">📘 Product Documentation</h2>
   <ul>
@@ -225,41 +260,6 @@ ul { list-style: none; padding: 0; }
     </li>
   </ul>
 
-  <h2 id="admin" class="section-title">🛠️ System Administration</h2>
-  <ul>
-    <li class="card admin">
-      <a class="item-title" href="https://download.support.xerox.com/pub/docs/VERSANT_80/userdocs/any-os/en/EN_SAG_Versant80Press_v3.1_Nov2015.pdf" target="_blank">
-        Xerox® Versant® 80 Press — System Administrator Guide
-      </a>
-      <p class="description">
-        <span class="badge admin">Admin</span>
-      </p>
-    </li>
-  </ul>
-
-  <h2 id="api" class="section-title">🔗 API & Integration</h2>
-  <ul>
-    <li class="card admin api">
-      <a class="item-title" href="data_connect_app_menu.pdf" target="_blank">
-        Pipeline Instructions — Online Help
-      </a>
-      <p class="description">
-        <span class="badge admin">Admin</span>
-        <span class="badge api">API</span>
-      </p>
-    </li>
-
-    <li class="card admin api">
-      <a class="item-title" href="api_selector.pdf" target="_blank">
-        API Selector Instructions — Online Help
-      </a>
-      <p class="description">
-        <span class="badge admin">Admin</span>
-        <span class="badge api">API</span>
-      </p>
-    </li>
-  </ul>
-
   <h2 id="hardware" class="section-title">🖨️ Hardware Documentation</h2>
   <ul>
     <li class="card hardware product">
@@ -286,6 +286,8 @@ ul { list-style: none; padding: 0; }
 </div>
 </body>
 </html>
+
+
 
 
 
