@@ -61,26 +61,21 @@
       color: #004578;
     }
 
-    .filter-btn {
+    .sidebar a {
       display: block;
       width: 100%;
       margin: 0.4rem 0;
       padding: 0.5rem;
       background: #f4f4f4;
-      border: none;
       border-radius: 6px;
-      cursor: pointer;
+      text-decoration: none;
+      color: #333;
       font-weight: 600;
-      text-align: left;
       transition: background 0.2s ease;
     }
 
-    .filter-btn:hover {
+    .sidebar a:hover {
       background: #e6e6e6;
-    }
-
-    .filter-btn.active {
-      background: #d7e6f7;
     }
 
     /* LAYOUT */
@@ -207,27 +202,19 @@
 
   <aside class="sidebar">
     <h3>Categories</h3>
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="product">📘 Product</button>
-    <button class="filter-btn" data-filter="admin">🛠️ Admin</button>
-    <button class="filter-btn" data-filter="api">🔗 API</button>
-    <button class="filter-btn" data-filter="hardware">🖨️ Hardware</button>
-    <button class="filter-btn" data-filter="training">🎓 Training</button>
+    <a href="#product">📘 Product</a>
+    <a href="#admin">🛠️ Admin</a>
+    <a href="#api">🔗 API</a>
+    <a href="#hardware">🖨️ Hardware</a>
+    <a href="#training">🎓 Training</a>
   </aside>
 
   <header>
     <h1>Katie Barber – Writing Samples</h1>
     <p>Lead Technical Writer • Software & Hardware Documentation • Structured Authoring</p>
 
-    <a href="KatieBarber.pdf" target="_blank" class="resume-button">
-      View My Résumé (PDF)
-    </a>
-
-    <a href="https://www.linkedin.com/in/katie-barber-0a966813/"
-       target="_blank"
-       class="resume-button">
-       Visit My LinkedIn
-    </a>
+    <a href="KatieBarber.pdf" target="_blank" class="resume-button">View My Résumé (PDF)</a>
+    <a href="https://www.linkedin.com/in/katie-barber-0a966813/" target="_blank" class="resume-button">Visit My LinkedIn</a>
   </header>
 
   <div class="container">
@@ -334,11 +321,11 @@
 
         <p class="description">
           <span class="badge training">Training</span>
-          Introductory walkthrough of DITA concepts and structured authoring
+          Introductory walkthrough of DITA concepts and structured authoring.
         </p>
 
         <video controls>
-          <source src="training_DITA.mov" type="video/mov">
+          <source src="training_DITA.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </li>
@@ -346,34 +333,10 @@
 
   </div>
 
-  <script>
-    // Simple category filtering
-    document.addEventListener('DOMContentLoaded', function () {
-      const buttons = document.querySelectorAll('.filter-btn');
-      const cards = document.querySelectorAll('.card');
-
-      buttons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const filter = btn.getAttribute('data-filter');
-
-          // active state
-          buttons.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-
-          cards.forEach(card => {
-            if (filter === 'all') {
-              card.style.display = '';
-            } else {
-              card.style.display = card.classList.contains(filter) ? '' : 'none';
-            }
-          });
-        });
-      });
-    });
-  </script>
-
 </body>
 </html>
+
+
 
 
 
