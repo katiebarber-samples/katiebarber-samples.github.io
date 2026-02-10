@@ -40,16 +40,16 @@ nav a:hover {
   padding: 0.3rem 0.6rem;
 }
 
-/* STATIC SIDEBAR */
+/* STATIC, NON-MOVING SIDEBAR */
 .sidebar {
   position: fixed;
   left: 0;
-  top: 300px;
+  top: 300px; /* fixed offset so it never floats */
   width: 180px;
   padding: 1rem;
   background: #fafafa;
   border-right: 1px solid #ddd;
-  height: calc(100% - 300px);
+  height: calc(100% - 300px); /* fixed height */
   box-shadow: 2px 0 6px rgba(0,0,0,0.05);
 }
 .sidebar h3 {
@@ -301,6 +301,8 @@ ul { list-style: none; padding: 0; }
 </div>
 </body>
 </html>
+
+
 
 
 
