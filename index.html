@@ -17,6 +17,7 @@
       line-height: 1.6;
     }
 
+    /* NAVIGATION */
     nav {
       background: #004578;
       padding: 0.7rem 1rem;
@@ -41,6 +42,7 @@
       padding: 0.3rem 0.6rem;
     }
 
+    /* SIDEBAR */
     .sidebar {
       position: fixed;
       left: 0;
@@ -77,6 +79,11 @@
       background: #e6e6e6;
     }
 
+    .filter-btn.active {
+      background: #d7e6f7;
+    }
+
+    /* LAYOUT */
     .container {
       max-width: 900px;
       margin: 2rem auto;
@@ -84,6 +91,7 @@
       margin-left: 220px;
     }
 
+    /* HEADER */
     header {
       background: linear-gradient(90deg, #004578, #005FB8);
       color: white;
@@ -97,25 +105,7 @@
       font-size: 2rem;
     }
 
-    .resume-button {
-      display: inline-block;
-      padding: 12px 24px;
-      background: #005FB8;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-      margin-top: 1rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
-    }
-
-    .resume-button:hover {
-      background: #0078D4;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.25);
-    }
-
+    /* SECTION TITLES */
     .section-title {
       background: #e8eef5;
       border-left: 5px solid #005FB8;
@@ -128,6 +118,7 @@
       font-size: 1.2rem;
     }
 
+    /* LISTS & CARDS */
     ul { list-style: none; padding: 0; }
 
     .card {
@@ -158,6 +149,7 @@
       font-size: 0.95rem;
     }
 
+    /* BADGES */
     .badge {
       display: inline-block;
       padding: 2px 8px;
@@ -173,6 +165,33 @@
     .badge.api { background: #b39ddb; }
     .badge.hardware { background: #f2a974; }
     .badge.training { background: #4aa3df; }
+
+    /* BUTTONS */
+    .resume-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #005FB8;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      margin-top: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+
+    .resume-button:hover {
+      background: #0078D4;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+    }
+
+    /* VIDEO */
+    video {
+      width: 100%;
+      border-radius: 6px;
+      margin-top: 0.5rem;
+    }
   </style>
 </head>
 
@@ -188,7 +207,7 @@
 
   <aside class="sidebar">
     <h3>Categories</h3>
-    <button class="filter-btn" data-filter="all">All</button>
+    <button class="filter-btn active" data-filter="all">All</button>
     <button class="filter-btn" data-filter="product">📘 Product</button>
     <button class="filter-btn" data-filter="admin">🛠️ Admin</button>
     <button class="filter-btn" data-filter="api">🔗 API</button>
@@ -200,8 +219,15 @@
     <h1>Katie Barber – Writing Samples</h1>
     <p>Lead Technical Writer • Software & Hardware Documentation • Structured Authoring</p>
 
-    <a href="KatieBarber.pdf" target="_blank" class="resume-button">View My Résumé (PDF)</a>
-    <a href="https://www.linkedin.com/in/katie-barber-0a966813/" target="_blank" class="resume-button">Visit My LinkedIn</a>
+    <a href="KatieBarber.pdf" target="_blank" class="resume-button">
+      View My Résumé (PDF)
+    </a>
+
+    <a href="https://www.linkedin.com/in/katie-barber-0a966813/"
+       target="_blank"
+       class="resume-button">
+       Visit My LinkedIn
+    </a>
   </header>
 
   <div class="container">
@@ -308,10 +334,10 @@
 
         <p class="description">
           <span class="badge training">Training</span>
-          Introductory walkthrough of DITA concepts and structured authoring.
+          Introductory walkthrough of DITA concepts and structured authoring
         </p>
 
-        <video controls width="100%" style="border-radius: 6px; margin-top: 0.5rem;">
+        <video controls>
           <source src="training_DITA.mov" type="video/mov">
           Your browser does not support the video tag.
         </video>
@@ -320,8 +346,36 @@
 
   </div>
 
+  <script>
+    // Simple category filtering
+    document.addEventListener('DOMContentLoaded', function () {
+      const buttons = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.card');
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+
+          // active state
+          buttons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          cards.forEach(card => {
+            if (filter === 'all') {
+              card.style.display = '';
+            } else {
+              card.style.display = card.classList.contains(filter) ? '' : 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+
 </body>
 </html>
+
+
 
 
 
