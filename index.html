@@ -44,12 +44,12 @@ nav a:hover {
 .sidebar {
   position: fixed;
   left: 0;
-  top: 300px; /* fixed, never moves */
+  top: 300px;
   width: 180px;
   padding: 1rem;
   background: #fafafa;
   border-right: 1px solid #ddd;
-  height: calc(100% - 300px); /* fixed, never changes */
+  height: calc(100% - 300px);
   box-shadow: 2px 0 6px rgba(0,0,0,0.05);
 }
 .sidebar h3 {
@@ -90,6 +90,15 @@ header {
 header h1 {
   margin: 0;
   font-size: 2rem;
+}
+
+/* HEADER NOTE */
+header .note {
+  margin: 0.8rem auto 0;
+  max-width: 650px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  opacity: 0.9;
 }
 
 /* SECTION TITLES */
@@ -178,7 +187,13 @@ ul { list-style: none; padding: 0; }
 
 <header>
   <h1>Katie Barber – Writing Samples</h1>
-  <p>Lead Technical Writer • Software & Hardware Documentation • Structured Authoring</p>
+  <p>Lead Technical Writer • Software & Hardware Documentation • API Documentation • Structured Authoring</p>
+
+  <p class="note">
+    These writing samples are PDFs exported from company online help systems.  
+    The original versions included full branding, navigation, and interactive UI elements.
+  </p>
+
   <a href="KatieBarber.pdf" target="_blank" class="resume-button">View My Résumé (PDF)</a>
   <a href="https://www.linkedin.com/in/katie-barber-0a966813/" target="_blank" class="resume-button">Visit My LinkedIn</a>
 </header>
@@ -286,6 +301,8 @@ ul { list-style: none; padding: 0; }
 </div>
 </body>
 </html>
+
+
 
 
 
