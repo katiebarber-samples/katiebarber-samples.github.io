@@ -40,16 +40,16 @@ nav a:hover {
   padding: 0.3rem 0.6rem;
 }
 
-/* FIXED SIDEBAR — RESPONSIVE OFFSET */
+/* STATIC SIDEBAR */
 .sidebar {
   position: fixed;
   left: 0;
-  top: calc(120px + 10vw); /* clears header on all screen sizes */
+  top: 300px; /* fixed, never moves */
   width: 180px;
   padding: 1rem;
   background: #fafafa;
   border-right: 1px solid #ddd;
-  height: calc(100% - (120px + 10vw));
+  height: calc(100% - 300px); /* fixed, never changes */
   box-shadow: 2px 0 6px rgba(0,0,0,0.05);
 }
 .sidebar h3 {
@@ -286,6 +286,8 @@ ul { list-style: none; padding: 0; }
 </div>
 </body>
 </html>
+
+
 
 
 
