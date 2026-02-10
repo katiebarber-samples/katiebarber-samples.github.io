@@ -17,7 +17,30 @@
       line-height: 1.6;
     }
 
-    /* SIDEBAR */
+    nav {
+      background: #004578;
+      padding: 0.7rem 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    }
+
+    nav a {
+      color: #ffdd55;
+      margin-right: 1.2rem;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.3rem 0.4rem;
+      border-radius: 4px;
+      transition: background 0.2s ease, padding 0.2s ease;
+    }
+
+    nav a:hover {
+      background: linear-gradient(90deg, #005FB8, #0078D4);
+      padding: 0.3rem 0.6rem;
+    }
+
     .sidebar {
       position: fixed;
       left: 0;
@@ -54,7 +77,6 @@
       background: #e6e6e6;
     }
 
-    /* LAYOUT */
     .container {
       max-width: 900px;
       margin: 2rem auto;
@@ -62,30 +84,6 @@
       margin-left: 220px;
     }
 
-    /* NAVIGATION */
-    nav {
-      background: #004578;
-      padding: 0.7rem 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-    }
-    nav a {
-      color: #ffdd55;
-      margin-right: 1.2rem;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 0.3rem 0.4rem;
-      border-radius: 4px;
-      transition: background 0.2s ease, padding 0.2s ease;
-    }
-    nav a:hover {
-      background: linear-gradient(90deg, #005FB8, #0078D4);
-      padding: 0.3rem 0.6rem;
-    }
-
-    /* HEADER */
     header {
       background: linear-gradient(90deg, #004578, #005FB8);
       color: white;
@@ -93,12 +91,31 @@
       text-align: center;
       box-shadow: 0 3px 6px rgba(0,0,0,0.2);
     }
+
     header h1 {
       margin: 0;
       font-size: 2rem;
     }
 
-    /* SECTION TITLES — subtle background */
+    .resume-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #005FB8;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      margin-top: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+
+    .resume-button:hover {
+      background: #0078D4;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+    }
+
     .section-title {
       background: #e8eef5;
       border-left: 5px solid #005FB8;
@@ -111,13 +128,8 @@
       font-size: 1.2rem;
     }
 
-    /* ICONS */
-    .icon { font-size: 1.2rem; }
-
-    /* LISTS */
     ul { list-style: none; padding: 0; }
 
-    /* CARDS */
     .card {
       background: white;
       margin: 0.5rem 0;
@@ -126,17 +138,18 @@
       box-shadow: 0 1px 3px rgba(0,0,0,0.1);
       transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
+
     .card:hover {
       transform: translateY(-3px);
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
 
-    /* LINKS */
     .item-title {
       color: #005FB8;
       font-weight: bold;
       text-decoration: none;
     }
+
     .item-title:hover { text-decoration: underline; }
 
     .description {
@@ -145,7 +158,6 @@
       font-size: 0.95rem;
     }
 
-    /* BADGES — softer colors */
     .badge {
       display: inline-block;
       padding: 2px 8px;
@@ -160,25 +172,7 @@
     .badge.admin { background: #8bc98b; }
     .badge.api { background: #b39ddb; }
     .badge.hardware { background: #f2a974; }
-
-    /* BUTTONS */
-    .resume-button {
-      display: inline-block;
-      padding: 12px 24px;
-      background: #005FB8;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-      margin-top: 1rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
-    }
-    .resume-button:hover {
-      background: #0078D4;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.25);
-    }
+    .badge.training { background: #4aa3df; }
   </style>
 </head>
 
@@ -189,6 +183,7 @@
     <a href="#admin">Admin</a>
     <a href="#api">API</a>
     <a href="#hardware">Hardware</a>
+    <a href="#training">Training</a>
   </nav>
 
   <aside class="sidebar">
@@ -198,21 +193,15 @@
     <button class="filter-btn" data-filter="admin">🛠️ Admin</button>
     <button class="filter-btn" data-filter="api">🔗 API</button>
     <button class="filter-btn" data-filter="hardware">🖨️ Hardware</button>
+    <button class="filter-btn" data-filter="training">🎓 Training</button>
   </aside>
 
   <header>
     <h1>Katie Barber – Writing Samples</h1>
     <p>Lead Technical Writer • Software & Hardware Documentation • Structured Authoring</p>
 
-    <a href="KatieBarber.pdf" target="_blank" class="resume-button">
-      View My Résumé (PDF)
-    </a>
-
-    <a href="https://www.linkedin.com/in/katie-barber-0a966813/"
-       target="_blank"
-       class="resume-button">
-       Visit My LinkedIn
-    </a>
+    <a href="KatieBarber.pdf" target="_blank" class="resume-button">View My Résumé (PDF)</a>
+    <a href="https://www.linkedin.com/in/katie-barber-0a966813/" target="_blank" class="resume-button">Visit My LinkedIn</a>
   </header>
 
   <div class="container">
@@ -301,7 +290,15 @@
       </li>
 
       <li class="card hardware product">
-        <a class="item-title" href="https://download.support.xerox.com/pub/docs/WC3335_WC3345/userdocs/any-os/pt_BR/quick_use_
+        <a class="item-title" href="https://download.support.xerox.com/pub/docs/WC3335_WC3345/userdocs/any-os/pt_BR/quick_use_guide_en_fr_it_de_es_pt.pdf" target="_blank">
+          Xerox® WorkCentre® 3335/3345 — Quick Use Guide
+        </a>
+        <p class="description">
+          <span class="badge hardware">Hardware</span>
+          <span class="badge product">Product</span>
+        </p>
+      </li>
+    </ul>
 
     <h2 id="training" class="section-title">🎓 Training</h2>
 
@@ -325,6 +322,8 @@
 
 </body>
 </html>
+
+
 
 
 
