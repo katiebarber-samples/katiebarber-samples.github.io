@@ -53,23 +53,17 @@ header h1 {
   font-size: 2rem;
 }
 
-/* LAYOUT WRAPPER */
-.layout {
-  display: flex;
-  align-items: flex-start;
-}
-
-/* SIDEBAR */
+/* SIDEBAR — FIXED + RESPONSIVE OFFSET */
 .sidebar {
-  position: sticky;
-  top: 20px;
+  position: fixed;
+  left: 0;
+  top: calc(120px + 10vw); /* always clears header */
   width: 180px;
   padding: 1rem;
   background: #fafafa;
   border-right: 1px solid #ddd;
+  height: calc(100% - (120px + 10vw));
   box-shadow: 2px 0 6px rgba(0,0,0,0.05);
-  height: auto;
-  margin-top: 20px;
 }
 .sidebar h3 {
   margin-top: 0;
@@ -94,7 +88,8 @@ header h1 {
 .container {
   max-width: 900px;
   padding: 0 1rem;
-  margin-left: 40px;
+  margin-left: 220px;
+  margin-top: 40px;
 }
 
 /* SECTION TITLES */
@@ -187,8 +182,6 @@ ul { list-style: none; padding: 0; }
   <a href="KatieBarber.pdf" target="_blank" class="resume-button">View My Résumé (PDF)</a>
   <a href="https://www.linkedin.com/in/katie-barber-0a966813/" target="_blank" class="resume-button">Visit My LinkedIn</a>
 </header>
-
-<div class="layout">
 
 <aside class="sidebar">
   <h3>Categories</h3>
@@ -291,9 +284,10 @@ ul { list-style: none; padding: 0; }
   </ul>
 
 </div>
-</div>
 </body>
 </html>
+
+
 
 
 
