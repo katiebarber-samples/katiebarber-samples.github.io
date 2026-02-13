@@ -155,6 +155,9 @@ ul { list-style: none; padding: 0; }
 .badge.api { background: #b39ddb; }
 .badge.hardware { background: #f2a974; }
 
+/* NEW: TRAINING BADGE */
+.badge.training { background: #4aa3df; }
+
 /* BUTTONS */
 .resume-button {
   display: inline-block;
@@ -183,6 +186,7 @@ ul { list-style: none; padding: 0; }
   <a href="#admin">Admin</a>
   <a href="#product">Product</a>
   <a href="#hardware">Hardware</a>
+  <a href="#training">Training</a>
 </nav>
 
 <header>
@@ -204,6 +208,7 @@ ul { list-style: none; padding: 0; }
   <a href="#admin">🛠️ Admin</a>
   <a href="#product">📘 Product</a>
   <a href="#hardware">🖨️ Hardware</a>
+  <a href="#training">🎥 Training</a>
 </aside>
 
 <div class="container">
@@ -298,9 +303,42 @@ ul { list-style: none; padding: 0; }
     </li>
   </ul>
 
+  <!-- ⭐ NEW TRAINING SECTION ⭐ -->
+  <h2 id="training" class="section-title">🎥 Training</h2>
+  <ul>
+    <li class="card training">
+      <h3 class="item-title">DITA Training Video</h3>
+
+      <!-- Gradient Icon Placeholder (no upload needed) -->
+      <div style="
+        width: 100%;
+        background: linear-gradient(90deg, #004578, #0078D4);
+        border-radius: 8px;
+        padding: 40px 0;
+        text-align: center;
+        font-size: 48px;
+        color: white;
+        margin-bottom: 10px;">
+        🎥
+      </div>
+
+      <video controls width="100%" style="border-radius: 8px;">
+        <source src="training-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <p class="description">
+        <span class="badge training">Training</span>
+        A short walkthrough demonstrating DITA concepts and structure.
+      </p>
+    </li>
+  </ul>
+
 </div>
 </body>
 </html>
+
+
 
 
 
