@@ -1,322 +1,350 @@
-me<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Katie Barber Writing Samples</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Katie Barber Writing Samples</title>
 
-<style>
-html { scroll-behavior: smooth; }
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f7f7f7;
-  color: #333;
-  line-height: 1.6;
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #F5F6F7;
+      color: #2E3A45;
+      line-height: 1.6;
+    }
 
-/* NAVIGATION */
-nav {
-  background: #004578;
-  padding: 0.7rem 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-}
-nav a {
-  color: #ffdd55;
-  margin-right: 1.2rem;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 0.3rem 0.4rem;
-  border-radius: 4px;
-  transition: background 0.2s ease, padding 0.2s ease;
-}
-nav a:hover {
-  background: linear-gradient(90deg, #005FB8, #0078D4);
-  padding: 0.3rem 0.6rem;
-}
+    /* NAVIGATION */
+    nav {
+      background: #2E3A45;
+      padding: 0.9rem 1.4rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    }
 
-/* STATIC, NON-MOVING SIDEBAR */
-.sidebar {
-  position: fixed;
-  left: 0;
-  top: 300px;
-  width: 180px;
-  padding: 1rem;
-  background: #fafafa;
-  border-right: 1px solid #ddd;
-  height: calc(100% - 300px);
-  box-shadow: 2px 0 6px rgba(0,0,0,0.05);
-}
-.sidebar h3 {
-  margin-top: 0;
-  font-size: 1.1rem;
-  color: #004578;
-}
-.sidebar a {
-  display: block;
-  width: 100%;
-  margin: 0.4rem 0;
-  padding: 0.5rem;
-  background: #f4f4f4;
-  border-radius: 6px;
-  text-decoration: none;
-  color: #333;
-  font-weight: 600;
-  transition: background 0.2s ease;
-}
-.sidebar a:hover { background: #e6e6e6; }
+    nav a {
+      color: #C9A86A;
+      margin-right: 1.4rem;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.35rem 0.5rem;
+      border-radius: 4px;
+      transition: background 0.2s ease, padding 0.2s ease;
+    }
 
-/* MAIN CONTENT */
-.container {
-  max-width: 900px;
-  padding: 0 1rem;
-  margin-left: 220px;
-  margin-top: 40px;
-}
+    nav a:hover {
+      background: #4F6272;
+      padding: 0.35rem 0.7rem;
+    }
 
-/* HEADER */
-header {
-  background: linear-gradient(90deg, #004578, #005FB8);
-  color: white;
-  padding: 2rem 1rem;
-  text-align: center;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-}
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-}
+    /* SIDEBAR */
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 260px;
+      width: 190px;
+      padding: 1.2rem;
+      background: #F5F6F7;
+      border-right: 1px solid #D0D4D8;
+      height: calc(100% - 260px);
+      box-shadow: 2px 0 6px rgba(0,0,0,0.05);
+    }
 
-/* HEADER NOTE */
-header .note {
-  margin: 0.8rem auto 0;
-  max-width: 650px;
-  font-size: 0.9rem;
-  line-height: 1.4;
-  opacity: 0.9;
-}
+    .sidebar h3 {
+      margin-top: 0;
+      font-size: 1.1rem;
+      color: #2E3A45;
+    }
 
-/* SECTION TITLES */
-.section-title {
-  background: #e8eef5;
-  border-left: 5px solid #005FB8;
-  padding: 0.8rem 1rem;
-  margin-top: 2.5rem;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1.2rem;
-}
+    .sidebar a {
+      display: block;
+      width: 100%;
+      margin: 0.55rem 0;
+      padding: 0.55rem 0.7rem;
+      background: #E6EAED;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #2E3A45;
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
 
-/* LISTS & CARDS */
-ul { list-style: none; padding: 0; }
-.card {
-  background: white;
-  margin: 0.5rem 0;
-  padding: 1rem;
-  border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-.card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-.item-title {
-  color: #005FB8;
-  font-weight: bold;
-  text-decoration: none;
-}
-.item-title:hover { text-decoration: underline; }
-.description {
-  margin-top: 0.3rem;
-  color: #555;
-  font-size: 0.95rem;
-}
+    .sidebar a:hover {
+      background: #DCE3EB;
+    }
 
-/* BADGES */
-.badge {
-  display: inline-block;
-  padding: 2px 8px;
-  border-radius: 6px;
-  font-size: 0.75rem;
-  font-weight: bold;
-  margin-right: 6px;
-  color: white;
-}
-.badge.product { background: #6fa8dc; }
-.badge.admin { background: #8bc98b; }
-.badge.api { background: #b39ddb; }
-.badge.hardware { background: #f2a974; }
+    /* MAIN CONTENT */
+    .container {
+      max-width: 900px;
+      padding: 0 1rem;
+      margin-left: 230px;
+      margin-top: 40px;
+    }
 
-/* NEW: TRAINING BADGE */
-.badge.training { background: #4aa3df; }
+    /* HEADER */
+    header {
+      background: linear-gradient(90deg, #2E3A45, #4F6272);
+      color: white;
+      padding: 2.6rem 1rem;
+      text-align: center;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    }
 
-/* BUTTONS */
-.resume-button {
-  display: inline-block;
-  padding: 12px 24px;
-  background: #005FB8;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 600;
-  margin-top: 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
-}
-.resume-button:hover {
-  background: #0078D4;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
-}
-</style>
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    header p {
+      margin: 0.6rem auto 0;
+      font-size: 1.05rem;
+      max-width: 700px;
+      opacity: 0.95;
+      line-height: 1.5;
+    }
+
+    header .note {
+      margin-top: 1rem;
+      font-size: 0.92rem;
+      opacity: 0.85;
+      line-height: 1.45;
+    }
+
+    /* BUTTONS */
+    .button-primary {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #4F6272;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      margin-top: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+
+    .button-primary:hover {
+      background: #2E3A45;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+    }
+
+    /* SECTION TITLES */
+    .section-title {
+      background: #DCE3EB;
+      border-left: 5px solid #4F6272;
+      padding: 0.8rem 1rem;
+      margin-top: 3.2rem;
+      margin-bottom: 1.2rem;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    /* LISTS & CARDS */
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .card {
+      background: white;
+      margin: 0.9rem 0;
+      padding: 1.2rem 1.3rem;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+
+    .item-title {
+      color: #4F6272;
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-decoration: none;
+    }
+
+    .item-title:hover {
+      text-decoration: underline;
+    }
+
+    .description {
+      margin-top: 0.45rem;
+      color: #4F6272;
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+
+    /* BADGES */
+    .badge {
+      display: inline-block;
+      padding: 3px 9px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      margin-right: 8px;
+      color: white;
+    }
+
+    .badge.product { background: #6F7F89; }
+    .badge.admin { background: #7A8C7A; }
+    .badge.api { background: #8E7FAE; }
+    .badge.hardware { background: #C49A6C; }
+    .badge.training { background: #6A8BAA; }
+
+    /* TRAINING PLACEHOLDER */
+    .training-placeholder {
+      width: 100%;
+      background: linear-gradient(90deg, #2E3A45, #4F6272);
+      border-radius: 8px;
+      padding: 40px 0;
+      text-align: center;
+      font-size: 48px;
+      color: white;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 
 <body>
 
-<nav>
-  <a href="#api">API</a>
-  <a href="#admin">Admin</a>
-  <a href="#product">Product</a>
-  <a href="#training">Training</a>
-</nav>
+  <nav>
+    <a href="#api">API</a>
+    <a href="#admin">Admin</a>
+    <a href="#product">Product</a>
+    <a href="#training">Training</a>
+  </nav>
 
-<header>
-  <h1>Katie Barber – Writing Samples</h1>
-  <p>Lead Technical Writer • API Documentation • Software & Hardware Documentation • Structured Authoring</p>
+  <header>
+    <h1>Katie Barber – Writing Samples</h1>
+    <p>Lead Technical Writer • API Documentation • Software & Hardware Documentation • Structured Authoring</p>
+    <p class="note">
+      These writing samples are PDFs exported from company online help systems. The original versions included full branding, navigation, and interactive UI elements. Product names are removed for confidentiality.
+    </p>
 
-  <p class="note">
-    These writing samples are PDFs exported from company online help systems.  
-    The original versions included full branding, navigation, and interactive UI elements. Product names are removed for confidentiality.
-  </p>
+    <a href="KatieBarberresume.pdf" target="_blank" class="button-primary">View My Résumé (PDF)</a>
+    <a href="https://www.linkedin.com/in/katie-barber-0a966813/" target="_blank" class="button-primary">Visit My LinkedIn</a>
+  </header>
 
-  <a href="KatieBarberresume.pdf" target="_blank" class="resume-button">View My Résumé (PDF)</a>
-  <a href="https://www.linkedin.com/in/katie-barber-0a966813/" target="_blank" class="resume-button">Visit My LinkedIn</a>
-</header>
+  <aside class="sidebar">
+    <h3>Categories</h3>
+    <a href="#api">🔗 API</a>
+    <a href="#admin">🛠️ Admin</a>
+    <a href="#product">📘 Product</a>
+    <a href="#training">🎥 Training</a>
+  </aside>
 
-<aside class="sidebar">
-  <h3>Categories</h3>
-  <a href="#api">🔗 API</a>
-  <a href="#admin">🛠️ Admin</a>
-  <a href="#product">📘 Product</a>
-  <a href="#training">🎥 Training</a>
-</aside>
+  <div class="container">
 
-<div class="container">
+    <h2 id="api" class="section-title">🔗 API & Integration</h2>
+    <ul>
+      <li class="card admin api">
+        <a class="item-title" href="Manage_APIs.pdf" target="_blank">Manage API Instructions — Online Help</a>
+        <p class="description">
+          <span class="badge admin">Admin</span>
+          <span class="badge api">API</span>
+        </p>
+      </li>
 
-  <h2 id="api" class="section-title">🔗 API & Integration</h2>
-  <ul>
-       <li class="card admin api">
-      <a class="item-title" href="Manage_APIs.pdf" target="_blank">
-        Manage API Instructions — Online Help
-      </a>
-      <p class="description">
-        <span class="badge admin">Admin</span>
-        <span class="badge api">API</span>
-      </p>
-    </li>
-     <li class="card admin api">
-      <a class="item-title" href="productname_rel_release_notes.pdf" target="_blank">
-        Release notes — Online Help
-      </a>
-      <p class="description">
-        <span class="badge admin">Admin</span>
-        <span class="badge api">API</span>
-      </p>
-    </li>
-     <li class="card admin api">
-      <a class="item-title" href="Connect_to_Integration.pdf" target="_blank">
-        Integrations — Online Help
-      </a>
-      <p class="description">
-        <span class="badge admin">Admin</span>
-        <span class="badge api">API</span>
-      </p>
-    </li>
-     <li class="card admin api">
-      <a class="item-title" href="product_menu.pdf" target="_blank">
-        Pipeline Instructions — Online Help
-      </a>
-      <p class="description">
-        <span class="badge admin">Admin</span>
-        <span class="badge api">API</span>
-      </p>
-    </li>
-  </ul>
+      <li class="card admin api">
+        <a class="item-title" href="productname_rel_release_notes.pdf" target="_blank">Release notes — Online Help</a>
+        <p class="description">
+          <span class="badge admin">Admin</span>
+          <span class="badge api">API</span>
+        </p>
+      </li>
 
-  <h2 id="admin" class="section-title">🛠️ System Administration</h2>
-  <ul>
-    <li class="card admin">
-      <a class="item-title" href="https://www.office.xerox.com/latest/AB8BR-01U.PDF?_gl=1*mkoz0g*_gcl_au*MzI3MTE2NDguMTc2OTc5MzUxOA..*_ga*MTI1NTI1NzEyNy4xNzY5NzkzNTE4*_ga_XBMQ3R9MZE*czE3NzE1MzE3NzAkbzckZzEkdDE3NzE1MzE5OTAkajU3JGwwJGgw" target="_blank">
-        Xerox® AltaLink® B8045/B8055/B8065/B8075/B8090 Multifunction Printer Guide
-      </a>
-      <p class="description">
-        <span class="badge admin">Admin</span>
-      </p>
-    </li>
-     <li class="card admin">
-      <a class="item-title" href="https://download.support.xerox.com/pub/docs/VERSANT_80/userdocs/any-os/en/en_US_SAG_Versant_80_Press.pdf" target="_blank">
-        Xerox® Versant® 80 Press — System Administrator Guide
-      </a>
-      <p class="description">
-        <span class="badge admin">Admin</span>
-      </p>
-    </li>
-  </ul>
+      <li class="card admin api">
+        <a class="item-title" href="Connect_to_Integration.pdf" target="_blank">Integrations — Online Help</a>
+        <p class="description">
+          <span class="badge admin">Admin</span>
+          <span class="badge api">API</span>
+        </p>
+      </li>
 
-  <h2 id="product" class="section-title">📘 Product Documentation</h2>
-  <ul>
-    <li class="card product hardware">
-      <a class="item-title" href="https://download.support.xerox.com/pub/docs/VERSANT_80/userdocs/any-os/en_GB/EN_UG_Versant80Press_v3.1_Nov2015.pdf" target="_blank">
-        Xerox® Versant® 80 Press — User Guide
-      </a>
-      <p class="description">
-        <span class="badge product">Product</span>
-        <span class="badge hardware">Hardware</span>
-      </p>
-    </li>
-  </ul>
+      <li class="card admin api">
+        <a class="item-title" href="product_menu.pdf" target="_blank">Pipeline Instructions — Online Help</a>
+        <p class="description">
+          <span class="badge admin">Admin</span>
+          <span class="badge api">API</span>
+        </p>
+      </li>
+    </ul>
 
-   <h2 id="training" class="section-title">🎥 Training</h2>
-  <ul>
-    <li class="card training">
-      <h3 class="item-title">DITA Training Video</h3>
+    <h2 id="admin" class="section-title">🛠️ System Administration</h2>
+    <ul>
+      <li class="card admin">
+        <a class="item-title" href="https://www.office.xerox.com/latest/AB8BR-01U.PDF" target="_blank">
+          Xerox® AltaLink® B8045/B8055/B8065/B8075/B8090 Multifunction Printer Guide
+        </a>
+        <p class="description">
+          <span class="badge admin">Admin</span>
+        </p>
+      </li>
 
-      <!-- Gradient Icon Placeholder (no upload needed) -->
-      <div style="
-        width: 100%;
-        background: linear-gradient(90deg, #004578, #0078D4);
-        border-radius: 8px;
-        padding: 40px 0;
-        text-align: center;
-        font-size: 48px;
-        color: white;
-        margin-bottom: 10px;">
-        🎥
-      </div>
+      <li class="card admin">
+        <a class="item-title" href="https://download.support.xerox.com/pub/docs/VERSANT_80/userdocs/any-os/en/en_US_SAG_Versant_80_Press.pdf" target="_blank">
+          Xerox® Versant® 80 Press — System Administrator Guide
+        </a>
+        <p class="description">
+          <span class="badge admin">Admin</span>
+        </p>
+      </li>
+    </ul>
 
-      <video controls width="100%" style="border-radius: 8px;">
-        <source src="training-video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+    <h2 id="product" class="section-title">📘 Product Documentation</h2>
+    <ul>
+      <li class="card product hardware">
+        <a class="item-title" href="https://download.support.xerox.com/pub/docs/VERSANT_80/userdocs/any-os/en_GB/EN_UG_Versant80Press_v3.1_Nov2015.pdf" target="_blank">
+          Xerox® Versant® 80 Press — User Guide
+        </a>
+        <p class="description">
+          <span class="badge product">Product</span>
+          <span class="badge hardware">Hardware</span>
+        </p>
+      </li>
+    </ul>
 
-      <p class="description">
-        <span class="badge training">Training</span>
-        A short walkthrough I made to demonstrate DITA concepts and structure.
-      </p>
-    </li>
-  </ul>
+    <h2 id="training" class="section-title">🎥 Training</h2>
+    <ul>
+      <li class="card training">
+        <h3 class="item-title">DITA Training Video</h3>
 
-</div>
+        <div class="training-placeholder">🎥</div>
+
+        <video controls width="100%" style="border-radius: 8px;">
+          <source src="training-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <p class="description">
+          <span class="badge training">Training</span>
+          A short walkthrough I made to demonstrate DITA concepts and structure.
+        </p>
+      </li>
+    </ul>
+
+  </div>
 </body>
 </html>
+
+
 
 
 
